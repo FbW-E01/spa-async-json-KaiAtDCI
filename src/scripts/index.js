@@ -1,7 +1,32 @@
-// The following line makes sure your styles are included in the project. Don't remove this.
 import '../styles/main.scss';
-// Import any additional modules you want to include below \/
+import { recipes } from './data';
 
+function createRecipeCard(imageUrl, title, author, ingredients) {
+    return `
+        <div class="card">
+          <div class="image" style="background-image: url('${imageUrl}')"></div>
+          <div class="wrapper">
+            <div class="title">${title}</div>
+            <div class="author">${author}</div>
+            <hr/>
+            <div class="ingredients">${ingredients}</div>
+          </div>
+        </div>
+    `;
+}
 
-// \/ All of your javascript should go here \/
-
+Object.values(recipes).forEach(category => {
+    // console.log(category)
+    category.forEach(recipe => {
+        // console.log (recipe);
+        const type = recipe.type;
+        const author = recipe.author;
+        const title = recipe.title;
+        const ingredients = recipe.ingredients.join(', ');
+        const imageUrl = recipe.image;
+        const html = createRecipeCard(imageUrl, title, author, ingredients);
+        const element = document.createElement('div');
+        element.innerHTML = html;
+        document.getElementById(type).append(element);
+    })
+});

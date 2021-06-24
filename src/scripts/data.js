@@ -1,25 +1,27 @@
-const recipes = {
-    cakes: [{
-        type: "cakes",
-        author: "John Smith",
-        title: "Deliciously Decadent",
-        ingredients: ["chocolate", "milk", "flour", "vegetable oil", "sugar", "butter"],
-        image: "https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/easy_chocolate_cake_31070_16x9.jpg"
-    },
-    {
-        type: "cakes",
-        author: "Jane Doe",
-        title: "Ridiculous Raspberry",
-        ingredients: ["raspberries", "milk", "flour", "vegetable oil", "sugar", "butter"],
-        image: "https://thecakeblog.com/wp-content/uploads/2017/01/chocolate-raspberry-cake-thumb-sm.jpg"
-    },
-    {
-        type: "cakes",
-        author: "Tim Thomas",
-        title: "Famous NY Cheese Cake",
-        ingredients: ["cream cheese", "milk", "flour", "sugar", "butter", "biscuits"],
-        image: "https://www.tasteofhome.com/wp-content/uploads/2017/10/Vanilla-Cheesecake_EXPS_THLS17_205125_D02_23_3b-1.jpg"
-    }
+export const recipes = {
+    cakes:
+        [
+            {
+                type: "cakes",
+                author: "John Smith",
+                title: "Deliciously Decadent",
+                ingredients: ["chocolate", "milk", "flour", "vegetable oil", "sugar", "butter"],
+                image: "https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/easy_chocolate_cake_31070_16x9.jpg"
+            },
+            {
+                type: "cakes",
+                author: "Jane Doe",
+                title: "Ridiculous Raspberry",
+                ingredients: ["raspberries", "milk", "flour", "vegetable oil", "sugar", "butter"],
+                image: "https://thecakeblog.com/wp-content/uploads/2017/01/chocolate-raspberry-cake-thumb-sm.jpg"
+            },
+            {
+                type: "cakes",
+                author: "Tim Thomas",
+                title: "Famous NY Cheese Cake",
+                ingredients: ["cream cheese", "milk", "flour", "sugar", "butter", "biscuits"],
+                image: "https://www.tasteofhome.com/wp-content/uploads/2017/10/Vanilla-Cheesecake_EXPS_THLS17_205125_D02_23_3b-1.jpg"
+            }
     ],
     biscuits: [{
         type: "biscuits",
