@@ -16,17 +16,14 @@ function createRecipeCard(imageUrl, title, author, ingredients) {
 }
 
 Object.values(recipes).forEach(category => {
-    // console.log(category)
     category.forEach(recipe => {
-        // console.log (recipe);
         const type = recipe.type;
         const author = recipe.author;
         const title = recipe.title;
         const ingredients = recipe.ingredients.join(', ');
         const imageUrl = recipe.image;
-        const html = createRecipeCard(imageUrl, title, author, ingredients);
         const element = document.createElement('div');
-        element.innerHTML = html;
+        element.innerHTML = createRecipeCard(imageUrl, title, author, ingredients);
         document.getElementById(type).append(element);
     })
 });
